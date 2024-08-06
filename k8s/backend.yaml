@@ -15,12 +15,13 @@ spec:
       containers:
         - name: backend
           # 여러분의 backend image 주소를 입력해주세요.
-          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_cbedf7b87e15
+          # image: krmp-d2hub-idock.9rum.cc/dev-test/repo_cbedf7b87e15
+		  image: kimjihong/groom-hackerton-be
           env:
             - name: TZ
               value: Asia/Seoul
-            - name: DATABASE_URL
-              value: jdbc:mariadb://mariadb:3306/krampoline
+            # - name: DATABASE_URL
+            #   value: jdbc:mariadb://mariadb:3306/krampoline
           volumeMounts:
             - name: secret-volume
               mountPath: /etc/secret
@@ -30,7 +31,7 @@ spec:
           readinessProbe:
             httpGet:
               # 해당 /api 가 안  뚫려있으면 Ready 가 안되요.
-              path: /api/test
+              path: /api/v1/health
               port: 8080
       volumes:
         - name: secret-volume
