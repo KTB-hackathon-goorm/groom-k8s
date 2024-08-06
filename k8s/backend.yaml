@@ -16,7 +16,7 @@ spec:
         - name: backend
           # 여러분의 backend image 주소를 입력해주세요.
           # image: krmp-d2hub-idock.9rum.cc/dev-test/repo_cbedf7b87e15
-		  image: kimjihong/groom-hackerton-be
+		  image: kimjihong/groom-hackerton-be:latest
           env:
             - name: TZ
               value: Asia/Seoul
