@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_829a7e6ecb4a
+          image: krmp-d2hub-idock.9rum.cc/dev-test/repo_95a41acd4771
           resources:
             requests:
               memory: 1Gi
